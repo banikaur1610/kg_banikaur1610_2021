@@ -1,13 +1,12 @@
 var myArgs = process.argv.slice(2);
-console.log(myArgs);
+
 var result = "";
 myArgs.forEach((val) => {
 	var datas = (""+val).split("");
 	for(var i = 0;i < datas.length;i++){
 		result += getPhoneticValue(datas[i]);
 	}
-	result += ", ";
-	console.log(result);
+	result += ", ";	
 });
 var finalResult = result.slice(0, -2)
 console.log(finalResult);
